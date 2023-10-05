@@ -10,10 +10,14 @@
       background-color: #8E001C;
     }
     
+    header {
+      background-color: #FFb300 ;
+    }
+
     div {
       background-color: #FFb300;
       padding: 20px;
-      font-family: sans-serif;
+      font-family: 'Times New Roman';
       font-weight: bold;
       text-align: center;
       max-width: 800px;
@@ -50,20 +54,35 @@
         <p>?</p>
         <button>click me</button>
    </div>
-   
+
    <script>
+    
     // accessing the elements from our page
     var buttonElement = document.querySelector("button");
     var textElement = document.querySelector("p");
 
     // listening to a click event on the button
     buttonElement.addEventListener("click", changeText, false);
-
+    var text = 1
     // what gets called when the button is clicked
-    function changeText(e) {
-      textElement.innerText = "";
-      buttonElement.innerText = "Next";
-    }
+      function changeText(e) {
+          switch (text) {
+              case 1:
+                textElement.innerText = "Insert Stuff 1";
+                buttonElement.innerText = "Next";
+                text ++
+                break;
+              case 2:
+                textElement.innerText = "Insert Stuff 2";
+                text ++
+                break;
+              default:
+                alert("ERROR")
+                break;
+            }
+          textElement.innerText = "Insert Stuff 1";
+          buttonElement.innerText = "Next";
+          }
    </script>
 </body>
 
