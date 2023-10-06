@@ -12,6 +12,15 @@
     
     header {
       background-color: #FFb300 ;
+      font-family: 'Times New Roman';
+      font-weight: bold;
+      text-align: center;
+      max-width: 800px;
+      border-radius: 5px;
+      margin: 0 auto;
+      margin-top: 20px;
+      max-height: 200px;
+      padding: 20px;
     }
 
     div {
@@ -23,12 +32,17 @@
       max-width: 800px;
       border-radius: 5px;
       margin: 0 auto;
-      margin-top: 210px;
+      margin-top: 100px;
     }
-
+    
     p {
       font-size: 3em;
       margin: 100px;
+    }
+
+    p2 {
+      font-size: 3em;
+      margin: 150px;
     }
 
     button {
@@ -50,6 +64,11 @@
 </head>
 
 <body>
+    
+    <header>
+        <p2>THE RISE</p2>
+   </header>
+  
     <div>
         <p>?</p>
         <button>click me</button>
@@ -63,18 +82,21 @@
 
     // listening to a click event on the button
     buttonElement.addEventListener("click", changeText, false);
-    var text = 1
+    var section = 1
+    var text
     // what gets called when the button is clicked
       function changeText(e) {
-          switch (text) {
+          switch (section) {
               case 1:
-                textElement.innerText = "Insert Stuff 1";
+                text = "Insert Stuff";
+                textElement.innerText = text;
                 buttonElement.innerText = "Next";
-                text ++
+                section ++
                 break;
               case 2:
-                textElement.innerText = "Insert Stuff 2";
-                text ++
+                text = "Insert Stuff 2"
+                textElement.innerText = text;
+                section ++
                 break;
               default:
                 alert("ERROR")
