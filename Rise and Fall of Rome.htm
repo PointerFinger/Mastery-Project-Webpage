@@ -83,27 +83,22 @@
     // listening to a click event on the button
     buttonElement.addEventListener("click", changeText, false);
     var section = 1
-    var text
     // what gets called when the button is clicked
       function changeText(e) {
           switch (section) {
               case 1:
-                text = "Insert Stuff";
-                textElement.innerText = text;
+                textElement.innerText = "Insert Stuff 1";
                 buttonElement.innerText = "Next";
                 section ++
                 break;
               case 2:
-                text = "Insert Stuff 2"
-                textElement.innerText = text;
+                textElement.innerText = "Insert Stuff 2";
                 section ++
                 break;
               default:
                 alert("ERROR")
                 break;
             }
-          textElement.innerText = "Insert Stuff 1";
-          buttonElement.innerText = "Next";
           }
    </script>
 </body>
