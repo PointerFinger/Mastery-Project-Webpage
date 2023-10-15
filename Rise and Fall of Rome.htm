@@ -25,6 +25,10 @@
       padding: 20px;
     }
 
+    divleft {
+      float: left;
+    }
+
     div {
       background-color: #FFb300;
       padding: 20px;
@@ -34,12 +38,15 @@
       max-width: 800px;
       border-radius: 5px;
       margin: 0 auto;
-      margin-top: 1px;
+      margin-top: 15px;
     }
     
+    divright {
+      float: right;
+    }
     p {
       font-size: 3em;
-      margin: 100px;
+      margin: 10px;
     }
 
     p2 {
@@ -67,10 +74,17 @@
 
 <body>
     <divleft>
-      <img src="https://images.fineartamerica.com/images-medium-large-5/-romulus-legendary-founder-of-rome-mary-evans-picture-library.jpg" alt="Drawing of Romulus"
-        height="300px" 
-        width="228px"/>
-    </divleft>
+     <img src="file:///C:/Users/1760016444/Downloads/Romulus.jpg" alt="Painting of Romulus"
+      height="300px" 
+      width="228px" />
+  </divleft>
+
+    <divright>
+     <img src="file:///C:/Users/1760016444/Downloads/Remus.jpg" alt="Painting of Remus"
+      height="300px"
+      width="228px" />
+  </divright>
+
     <div>
         <p>?</p>
         <button>Start</button>
@@ -85,7 +99,7 @@
     var headerElement = document.querySelector("p2");
     // listening to a click event on the button
     buttonElement.addEventListener("click", changeText, false);
-    var section = 1
+    var section = 1;
     // what gets called when the button is clicked
       function changeText(e) {
           switch (section) {
