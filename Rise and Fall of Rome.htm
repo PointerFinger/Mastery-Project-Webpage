@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Rise and Fall of Rome</title>
-
+    <header>
+        <p2>THE RISE OF ROME</p2>
+  </header>
   <style>
     body {
       background-color: #8E001C;
@@ -32,7 +34,7 @@
       max-width: 800px;
       border-radius: 5px;
       margin: 0 auto;
-      margin-top: 100px;
+      margin-top: 1px;
     }
     
     p {
@@ -64,12 +66,10 @@
 </head>
 
 <body>
-    
-    <header>
-        <p2>THE RISE OF ROME</p2>
-   </header>
     <divleft>
-      <img src="https://images.fineartamerica.com/images-medium-large-5/-romulus-legendary-founder-of-rome-mary-evans-picture-library.jpg" alt="Drawing of Romulus">
+      <img src="https://images.fineartamerica.com/images-medium-large-5/-romulus-legendary-founder-of-rome-mary-evans-picture-library.jpg" alt="Drawing of Romulus"
+        height="300px" 
+        width="228px"/>
     </divleft>
     <div>
         <p>?</p>
@@ -79,6 +79,7 @@
    <script>
     
     // accessing the elements from our page
+    var imageElement = document.querySelector("img")
     var buttonElement = document.querySelector("button");
     var textElement = document.querySelector("p");
     var headerElement = document.querySelector("p2");
