@@ -66,12 +66,14 @@
 <body>
     
     <header>
-        <p2>THE RISE</p2>
+        <p2>THE RISE OF ROME</p2>
    </header>
-  
+    <divleft>
+      <img src="https://images.fineartamerica.com/images-medium-large-5/-romulus-legendary-founder-of-rome-mary-evans-picture-library.jpg" alt="Drawing of Romulus">
+    </divleft>
     <div>
         <p>?</p>
-        <button>click me</button>
+        <button>Start</button>
    </div>
 
    <script>
@@ -79,7 +81,7 @@
     // accessing the elements from our page
     var buttonElement = document.querySelector("button");
     var textElement = document.querySelector("p");
-
+    var headerElement = document.querySelector("p2");
     // listening to a click event on the button
     buttonElement.addEventListener("click", changeText, false);
     var section = 1
@@ -87,16 +89,49 @@
       function changeText(e) {
           switch (section) {
               case 1:
-                textElement.innerText = "Insert Stuff 1";
+                textElement.innerText = "Legend says that Rome was founded in 753 BCE by Romulus and Remus, the 2 sons of the war god Mars.";
                 buttonElement.innerText = "Next";
-                section ++
+                section ++;
                 break;
               case 2:
                 textElement.innerText = "Insert Stuff 2";
-                section ++
+                section ++;
+                break;
+              case 3:
+                textElement.innerText = "Insert Stuff 3";
+                section ++;
+                break;
+              case 4:
+                textElement.innerText = "Insert Stuff 4";
+                section ++;
+                break;
+              case 5:
+                textElement.innerText = "Insert Stuff 5";
+                section ++;
+                break;
+              case 6:
+                headerElement.innerText = "THE FALL OF ROME";
+                textElement.innerText = "Insert Stuff 1";
+                section ++;
+                break;
+              case 7:
+                textElement.innerText = "Insert Stuff 2";
+                section ++;
+                break;
+              case 8:
+                textElement.innerText = "Insert Stuff 3";
+                section ++;
+                break;
+              case 9:
+                textElement.innerText = "Insert Stuff 4";
+                section ++;
+                break;
+              case 10:
+                textElement.innerText = "Insert Stuff 5";
+                section ++;
                 break;
               default:
-                alert("ERROR")
+                alert("The End");
                 break;
             }
           }
