@@ -27,6 +27,7 @@
 
     divleft {
       float: left;
+      cursor: pointer;
     }
 
     div {
@@ -43,7 +44,15 @@
     
     divright {
       float: right;
+      cursor: pointer;
     }
+
+    infopic {
+      font-size: 3em;
+      text-align: center;
+      opacity: 0;
+    }
+
     p {
       font-size: 3em;
       margin: 10px;
@@ -63,6 +72,7 @@
 
     button:hover {
       background-color: #9FFFE3;
+      cursor: pointer;
     }
 
     button:active {
@@ -74,13 +84,13 @@
 
 <body>
     <divleft>
-     <img src="file:///C:/Users/1760016444/Downloads/Romulus.jpg" alt="Painting of Romulus"
+     <img src="Images/Romulus.jpg" alt="Painting of Romulus"
       height="300px" 
       width="228px" />
   </divleft>
 
     <divright>
-     <img src="file:///C:/Users/1760016444/Downloads/Remus.jpg" alt="Painting of Remus"
+     <img src="Images/Remus.jpg" alt="Painting of Remus"
       height="300px"
       width="228px" />
   </divright>
@@ -92,14 +102,18 @@
 
    <script>
     
-    // accessing the elements from our page
-    var imageElement = document.querySelector("img")
+    // declaring our variables
+    var imageText = document.querySelector("infopic")
+    var imageleftElement = document.querySelector("divleft")
+    var imagerightElement = document.querySelector("divright")
     var buttonElement = document.querySelector("button");
     var textElement = document.querySelector("p");
     var headerElement = document.querySelector("p2");
-    // listening to a click event on the button
-    buttonElement.addEventListener("click", changeText, false);
     var section = 1;
+    // listening to a click event on the button and images
+    buttonElement.addEventListener("click", changeText, false);
+    imageleftElement.addEventListener("imageleftClick", changeimageleftText, false);
+    imagerightElement.addEventListener("imagerightClick", changeimagerightText, false);
     // what gets called when the button is clicked
       function changeText(e) {
           switch (section) {
@@ -150,6 +164,10 @@
                 break;
             }
           }
+      // what gets called when the left image is clicked
+      function changeimageleftText(e) {
+        //insert stuff
+      }
    </script>
 </body>
 
