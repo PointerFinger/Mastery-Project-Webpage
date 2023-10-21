@@ -119,14 +119,14 @@
 </head>
 
 <body>
-    <divleft>
-     <img src="Images/Romulus.jpg" alt="Painting of Romulus"
+    <divleft onmouseover="leftHover()" onmouseout="leftunHover()">
+     <img id="leftImage" src="Images/Romulus.jpg" alt="Painting of Romulus"
       height="300px" 
       width="228px" />
   </divleft>
 
-    <divright>
-     <img src="Images/Remus.jpg" alt="Painting of Remus"
+    <divright onmouseover="rightHover()" onmouseout="rightunHover()">
+     <img id="rightImage" src="Images/Remus.jpg" alt="Painting of Remus"
       height="300px"
       width="228px" />
   </divright>
@@ -149,6 +149,8 @@
     var divElement = document.querySelector("div");
     var imageText = document.querySelector("infopic");
     var imagetextBox = document.querySelector("infopicbox");
+    var leftimageElement = document.getElementById("leftImage")
+    var rightimageElement = document.getElementById("rightImage")
     var imageleftElement = document.querySelector("divleft");
     var imagerightElement = document.querySelector("divright");
     var xElement = document.querySelector("x")
@@ -157,6 +159,7 @@
     var headerElement = document.querySelector("header");
     var headertextElement = document.querySelector("p2");
     var section = 1;
+    var enabled = true;
     // listening to a click event on the button and images
     buttonElement.addEventListener("click", changeText, false);
     imageleftElement.addEventListener("click", changeimageleftText, false);
@@ -168,6 +171,7 @@
           switch (section) {
               case 1:
                 textElement.innerText = "Legend says that Rome was founded in 753 BCE by Romulus and Remus, the 2 sons of the war god Mars.";
+                buttonElement.innerText = "Next"
                 imageleftElement.style.display = "block";
                 imagerightElement.style.display = "block";
                 section ++;
@@ -214,6 +218,28 @@
                 break;
             }
           }
+      // what gets called when the images have a cursor hover over it
+      function leftHover() {
+        if (enabled == true) {
+          imageleftElement.style.opacity = "0.7";
+        }
+      }
+      function rightHover() {
+        if (enabled == true) {
+          imagerightElement.style.opacity = "0.7";
+        }
+      }
+      // what gets called when the images have the cursor leave them
+      function leftunHover() {
+        if (enabled == true) {
+          imageleftElement.style.opacity = "1";
+        }
+      }
+      function rightunHover() {
+        if (enabled == true) {
+          imagerightElement.style.opacity = "1";
+        }
+      }
       // what gets called when the images are clicked
       function changeimageleftText(e) {
         switch (section) {
@@ -222,8 +248,9 @@
             break;
         }
         imagetextBox.style.display = "block";
+        enabled = false;
         divElement.style.opacity = "0.4";
-        imageleftElement.style.opacity = "0.4";
+        imageleftElement.style.opacity = "1";
         imagerightElement.style.opacity = "0.4";
         buttonElement.style.display = "none";
         textElement.style.opacity = "0.4";
@@ -237,9 +264,10 @@
             imageText.innerText = "Remus was the twin brother of Romulus and died to his brother's hands."
         }
         imagetextBox.style.display = "block";
+        enabled = false;
         divElement.style.opacity = "0.4";
         imageleftElement.style.opacity = "0.4";
-        imagerightElement.style.opacity = "0.4";
+        imagerightElement.style.opacity = "1";
         buttonElement.style.display = "none";
         textElement.style.opacity = "0.4";
         headerElement.style.opacity = "0.4";
@@ -248,6 +276,7 @@
 
       function closeimageText(e) {
         imagetextBox.style.display = "none";
+        enabled = true;
         divElement.style.opacity = "1";
         imageleftElement.style.opacity = "1";
         imagerightElement.style.opacity = "1";
