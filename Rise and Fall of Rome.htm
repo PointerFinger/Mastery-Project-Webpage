@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Rise and Fall of Rome</title>
     <header>
-        <p2>THE RISE OF ROME</p2>
+      <p2>THE RISE OF ROME</p2>
   </header>
   <style>
     body {
@@ -28,6 +28,7 @@
     divleft {
       float: left;
       cursor: pointer;
+      display: none;
     }
 
     div {
@@ -45,12 +46,47 @@
     divright {
       float: right;
       cursor: pointer;
+      display: none;
+    }
+
+    divleft:hover {
+      opacity: 0.7;
+    }
+
+    divright:hover {
+      opacity: 0.7;
     }
 
     infopic {
       font-size: 3em;
+      margin: 10px;
+    }
+
+    infopicbox {
+      position: fixed;
+      top: 155px;
+      right: 263px;
+      background-color: #FFb300;
+      padding: 20px;
+      font-family: 'Times New Roman';
+      font-weight: bold;
       text-align: center;
-      opacity: 0;
+      max-width: 800px;
+      border-radius: 5px;
+      margin: 0 auto;
+      margin-top: 15px;
+      display: none;
+    }
+
+    x {
+      position: absolute;
+      top: 0px;
+      right: 10px;
+      font-size: 2.5em;
+    }
+
+    x:hover {
+      cursor: pointer;
     }
 
     p {
@@ -100,26 +136,40 @@
         <button>Start</button>
    </div>
 
+    <infopicbox>
+      <infopic>TemplateText</infopic>
+      <x>X</x>
+   </infopicbox>
+
    <script>
     
     // declaring our variables
-    var imageText = document.querySelector("infopic")
-    var imageleftElement = document.querySelector("divleft")
-    var imagerightElement = document.querySelector("divright")
+    var headElement = document.querySelector("head");
+    var bodyElement = document.querySelector("body");
+    var divElement = document.querySelector("div");
+    var imageText = document.querySelector("infopic");
+    var imagetextBox = document.querySelector("infopicbox");
+    var imageleftElement = document.querySelector("divleft");
+    var imagerightElement = document.querySelector("divright");
+    var xElement = document.querySelector("x")
     var buttonElement = document.querySelector("button");
     var textElement = document.querySelector("p");
-    var headerElement = document.querySelector("p2");
+    var headerElement = document.querySelector("header");
+    var headertextElement = document.querySelector("p2");
     var section = 1;
     // listening to a click event on the button and images
     buttonElement.addEventListener("click", changeText, false);
-    imageleftElement.addEventListener("imageleftClick", changeimageleftText, false);
-    imagerightElement.addEventListener("imagerightClick", changeimagerightText, false);
+    imageleftElement.addEventListener("click", changeimageleftText, false);
+    imagerightElement.addEventListener("click", changeimagerightText, false);
+    xElement.addEventListener("click", closeimageText, false);
+
     // what gets called when the button is clicked
       function changeText(e) {
           switch (section) {
               case 1:
                 textElement.innerText = "Legend says that Rome was founded in 753 BCE by Romulus and Remus, the 2 sons of the war god Mars.";
-                buttonElement.innerText = "Next";
+                imageleftElement.style.display = "block";
+                imagerightElement.style.display = "block";
                 section ++;
                 break;
               case 2:
@@ -139,7 +189,7 @@
                 section ++;
                 break;
               case 6:
-                headerElement.innerText = "THE FALL OF ROME";
+                headertextElement.innerText = "THE FALL OF ROME";
                 textElement.innerText = "Insert Stuff 1";
                 section ++;
                 break;
@@ -164,9 +214,47 @@
                 break;
             }
           }
-      // what gets called when the left image is clicked
+      // what gets called when the images are clicked
       function changeimageleftText(e) {
-        //insert stuff
+        switch (section) {
+          case 2:
+            imageText.innerText = "Romulus was the first king of Rome from 753 to 716 BCE, he proclaimed himself king after killing his twin brother Remus.";
+            break;
+        }
+        imagetextBox.style.display = "block";
+        divElement.style.opacity = "0.4";
+        imageleftElement.style.opacity = "0.4";
+        imagerightElement.style.opacity = "0.4";
+        buttonElement.style.display = "none";
+        textElement.style.opacity = "0.4";
+        headerElement.style.opacity = "0.4";
+        headertextElement.style.opacity = "0.4";
+      }
+
+      function changeimagerightText(e) {
+        switch (section) {
+          case 2:
+            imageText.innerText = "Remus was the twin brother of Romulus and died to his brother's hands."
+        }
+        imagetextBox.style.display = "block";
+        divElement.style.opacity = "0.4";
+        imageleftElement.style.opacity = "0.4";
+        imagerightElement.style.opacity = "0.4";
+        buttonElement.style.display = "none";
+        textElement.style.opacity = "0.4";
+        headerElement.style.opacity = "0.4";
+        headertextElement.style.opacity = "0.4";
+      }
+
+      function closeimageText(e) {
+        imagetextBox.style.display = "none";
+        divElement.style.opacity = "1";
+        imageleftElement.style.opacity = "1";
+        imagerightElement.style.opacity = "1";
+        buttonElement.style.display = "inline";
+        textElement.style.opacity = "1";
+        headerElement.style.opacity = "1";
+        headertextElement.style.opacity = "1";
       }
    </script>
 </body>
