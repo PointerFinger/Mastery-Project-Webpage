@@ -177,7 +177,11 @@
                 section ++;
                 break;
               case 2:
-                textElement.innerText = "Insert Stuff 2";
+                textElement.innerText = "After Romulus, there was a line of 6 kings, all elected by the Roman senate.";
+                leftimageElement.src = "Images/Roman Senate.jpg";
+                leftimageElement.alt = "Painting of the Roman Senate";
+                rightimageElement.src = "Images/Lucius Tarquinius Superbus.jpg";
+                rightimageElement.alt = "Painting of Lucius Tarquinius Superbus";
                 section ++;
                 break;
               case 3:
@@ -244,7 +248,10 @@
       function changeimageleftText(e) {
         switch (section) {
           case 2:
-            imageText.innerText = "Romulus was the first king of Rome from 753 to 716 BCE, he proclaimed himself king after killing his twin brother Remus.";
+            imageText.innerText = "Romulus was the first king of Rome, which is named after him. He ruled from 753 to 716 BCE, he proclaimed himself king after killing his twin brother Remus.";
+            break;
+          case 3:
+            imageText.innerText = "The Roman Senate served as an advisory council under the monarchy, with undefined powers.";
             break;
         }
         imagetextBox.style.display = "block";
@@ -261,7 +268,11 @@
       function changeimagerightText(e) {
         switch (section) {
           case 2:
-            imageText.innerText = "Remus was the twin brother of Romulus and died to his brother's hands."
+            imageText.innerText = "Remus was the twin brother of Romulus, and died to his brother's hands.";
+            break;
+          case 3:
+            imageText.innerText = "Lucius Tarquinius Superbus was the last king of Rome. After he lost his power, Rome started the transition from a monarchy to a republic.";
+            break;
         }
         imagetextBox.style.display = "block";
         enabled = false;
