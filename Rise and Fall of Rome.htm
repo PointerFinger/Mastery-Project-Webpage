@@ -185,7 +185,11 @@
                 section ++;
                 break;
               case 3:
-                textElement.innerText = "Insert Stuff 3";
+                textElement.innerText = "After becoming a republic, the Roman monarchy's power was divided between two consuls, the consuls were elected by the people and were commanders in chief of the army.";
+                leftimageElement.src = "Images/Plebian Tribune.jpg";
+                leftimageElement.alt = "Painting of the Plebian Tribune";
+                rightimageElement.src = "Images/Twelve Tables of Rome.jpg";
+                rightimageElement.alt = "Art of The Twelve Tables of Rome";
                 section ++;
                 break;
               case 4:
@@ -253,6 +257,9 @@
           case 3:
             imageText.innerText = "The Roman Senate served as an advisory council under the monarchy, with undefined powers.";
             break;
+          case 4:
+            imageText.innerText = "Created in 494 BCE, the plebian tribune served as a connection of the common people and the rich elite class. It let the common people (plebians) to have a place in the Roman senate."
+            break;
         }
         imagetextBox.style.display = "block";
         enabled = false;
@@ -273,6 +280,9 @@
           case 3:
             imageText.innerText = "Lucius Tarquinius Superbus was the last king of Rome. After he lost his power, Rome started the transition from a monarchy to a republic.";
             break;
+          case 4:
+            imagetextBox.style.top = "70px"
+            imageText.innerText = "Beginning in 451 BCE, the Twelve Tables were worked on by a set of 10 commissioners at the insistence of the plebians. The Twelve Tables were a set of tablets that were the first written legislation of law in Ancient Rome. In 450 BCE, the Twelve Tables were posted in the Roman Forum."
         }
         imagetextBox.style.display = "block";
         enabled = false;
@@ -287,6 +297,7 @@
 
       function closeimageText(e) {
         imagetextBox.style.display = "none";
+        imagetextBox.style.top = "155px";
         enabled = true;
         divElement.style.opacity = "1";
         imageleftElement.style.opacity = "1";
