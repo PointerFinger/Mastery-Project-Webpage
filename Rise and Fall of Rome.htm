@@ -196,17 +196,22 @@
                 textElement.innerText = "The Romans were exceptionally good at warfare and by 264 BCE they had control over the entire Italian peninsula. They also fought a series of wars known as the Punic Wars with Carthage, a powerful city-state in northern Africa.";
                 textElement.style.fontSize = "2.5em";
                 leftimageElement.src = "Images/Macedonian Wars.jpg";
-                leftimageElement.alt = "Painting of the Roman Senate";
+                leftimageElement.alt = "Painting of the Macedonian Wars";
                 rightimageElement.src = "Images/Punic Wars.jpg";
-                rightimageElement.alt = "Painting of Lucius Tarquinius Superbus";
+                rightimageElement.alt = "Painting of the Punic Wars";
                 section ++;
                 break;
               case 5:
-                textElement.innerText = "Insert Stuff 5";
+                textElement.innerText = "After gaining glory in Spain, Gaius Julius Caesar had gained governorship of 3 provinces in Gaul during 58 BCE. After increasing wealth that had eclipsed then sole concul Pompey, Caesar started a civil war that ended in him being dictator of Rome in 45 BCE.";
+                leftimageElement.src = "Images/Emperor Augustus.jpg";
+                leftimageElement.alt = "Painting of Emperor Augustus";
+                rightimageElement.src = "Images/Roman Christianity.jpg";
+                rightimageElement.alt = "Painting of Jesus Christ";
                 section ++;
                 break;
               case 6:
                 headertextElement.innerText = "THE FALL OF ROME";
+                textElement.style.fontSize = "3em";
                 textElement.innerText = "Insert Stuff 1";
                 section ++;
                 break;
@@ -265,6 +270,12 @@
           case 4:
             imageText.innerText = "Created in 494 BCE, the plebian tribune served as a connection of the common people and the rich, elite class. It let the common people (plebians) to have a place in the Roman senate."
             break;
+          case 5:
+            imagetextBox.style.top = "80px"
+            imageText.innerText = "Starting in 215 and ending in 148 BCE, the 4 Macedonian Wars were large scale wars between the Roman empire and the kingdom of Macedonia. The result of the wars was Rome destroying the kingdom of Macedonia while taking all their territory for themselves."
+          case 6:
+            imagetextBox.style.top = "40px"
+            imageText.innerText = "After Caesar’s death in 44 BCE, his great-nephew Octavian became the ruler of Rome in which he was their first emperor in all but name. In 26 BCE, the Roman senate gave him the name Augustus. He died in 14 CE and his last words to his people were “I found Rome of clay; I leave it to you of marble”."
         }
         imagetextBox.style.display = "block";
         enabled = false;
@@ -292,6 +303,10 @@
           case 5:
             imagetextBox.style.top = "80px";
             imageText.innerText = "Starting in 264 and ending in 146 BCE, the 3 Punic Wars were large scale wars between the Roman empire and the city-state of Carthage. The result of the wars was Rome getting Sicily and destroying Carthage while taking all their territory for themselves.";
+            break;
+          case 6:
+            imageText.innerText = "Christianity was persecuted in Rome whose major religion was Paganism until 312 CE when Constantine converted to Christianity and defeated the emperor at the Battle of Milvian Bridge.";
+            break;
         }
         imagetextBox.style.display = "block";
         enabled = false;
